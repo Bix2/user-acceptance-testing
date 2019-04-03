@@ -4,7 +4,9 @@
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
-    "test": "jest"
+    "test": "jest",
+    "appium": "appium",
+    "appium:doctor": "appium-doctor"
   },
   "dependencies": {
     "react": "16.8.3",
@@ -13,10 +15,13 @@
   "devDependencies": {
     "@babel/core": "^7.4.3",
     "@babel/runtime": "^7.4.3",
+    "appium": "^1.12.1",
+    "appium-doctor": "^1.9.0",
     "babel-jest": "^24.7.0",
     "jest": "^24.7.0",
     "metro-react-native-babel-preset": "^0.53.1",
-    "react-test-renderer": "16.8.3"
+    "react-test-renderer": "16.8.3",
+    "wd": "^1.11.1"
   },
   "jest": {
     "preset": "react-native"
