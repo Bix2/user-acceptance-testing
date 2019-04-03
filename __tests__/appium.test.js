@@ -30,3 +30,13 @@ test('appium button click', async () => {
     const counter = await driver.elementByAccessibilityId('counter').text();
     expect(counter).toBe('2');
 });
+
+test('appium text input', async () => {
+    const TEXT = 'hello';
+    await driver.elementByAccessibilityId('textinput')
+      .type(TEXT);
+  
+    const resultText = await driver.elementByAccessibilityId('text').text();
+  
+    expect(resultText).toBe(TEXT)
+});
