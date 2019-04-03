@@ -20,3 +20,13 @@ test('appium renders', async () => {
     expect(await driver.hasElementByAccessibilityId('testview')).toBe(true);
     expect(await driver.hasElementByAccessibilityId('notthere')).toBe(false);
 });
+
+test('appium button click', async () => {
+    expect(await driver.hasElementByAccessibilityId('button')).toBe(true);
+    await driver.elementByAccessibilityId('button')
+      .click()
+      .click();
+  
+    const counter = await driver.elementByAccessibilityId('counter').text();
+    expect(counter).toBe('2');
+});
